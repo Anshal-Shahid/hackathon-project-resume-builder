@@ -20,6 +20,22 @@
   ],
   "routes": [
     {
+      "src": "/panel.html",
+      "dest": "/panel.html"
+    },
+    {
+      "src": "/panel.css",
+      "dest": "/panel.css"
+    },
+    {
+      "src": "/script.js",
+      "dest": "/script.js"
+    },
+    {
+      "src": "/script.ts",
+      "dest": "/script.ts"
+    },
+    {
       "src": "/(.*)",
       "dest": "/panel.html"
     }
