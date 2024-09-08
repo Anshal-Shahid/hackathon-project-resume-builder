@@ -16,6 +16,10 @@
     {
       "src": "*.ts",
       "use": "@vercel/static"
+    },
+    {
+      "src": "fonts/**/*",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
@@ -38,6 +42,10 @@
     {
       "src": "/(.*)",
       "dest": "/panel.html"
+    },
+    {
+      "src": "/fonts/(.*)",
+      "dest": "/fonts/$1"
     }
   ]
 }
