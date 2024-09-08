@@ -169,8 +169,8 @@ const content_string = [
 
 
 
-const button_1 = document.querySelector(".text .button_1") as HTMLButtonElement
-const button_2 = document.querySelector(".text .button_2") as HTMLButtonElement
+const button_1 = document.querySelector(".button_1") as HTMLButtonElement
+const button_2 = document.querySelector(".button_2") as HTMLButtonElement
 const cv = document.querySelector(".cv")
 button_2.addEventListener("click", () => {
     const element = cv
@@ -263,10 +263,30 @@ button_1.addEventListener("click", () => {
                 content[i].innerText = input.value
             }
 
-            const img = document.querySelector(".image-selector input") as HTMLInputElement | null
-            if (img) {
-                content[i].style.backgroundImage = `url(${img.value})`
-            }
+            // const fileInput = document.querySelector("#imageInput") as HTMLInputElement | null;
+
+            // if (fileInput) {
+            //   fileInput.addEventListener("change", (event) => {
+            //     const file = (event.target as HTMLInputElement).files?.[0];
+            //     if (file) {
+            //       const reader = new FileReader();
+            //       reader.onload = (e) => {
+            //         const contentElement = content[i]; // Ensure content[i] is valid
+            //         if (contentElement) {
+            //           contentElement.style.backgroundImage = `url(${e.target?.result})`;
+            //         } else {
+            //           console.error("Content element at index", i, "is not defined or out of bounds.");
+            //         }
+            //       };
+            //       reader.readAsDataURL(file); // Read the file as a data URL
+            //     } else {
+            //       console.error("No file selected.");
+            //     }
+            //   });
+            // } else {
+            //   console.error("File input element not found.");
+            // }
+            
 
 
 
@@ -394,15 +414,18 @@ function content_click(element: HTMLElement | null, values: string) {
             }
 
                 // check_image
-            const txt=document.querySelector(".text")
+            const txt=document.querySelector(".edit-text")
+            const btns=document.querySelector(".btns-container")
             const img_selector=document.querySelector(".img-selector ")
             if (values==="img") {
                 
                 txt?.classList.add("hide")
+                btns?.classList.add("hide")
                 img_selector?.classList.remove("hide")
             }
             else{
                 txt?.classList.remove("hide")
+                btns?.classList.remove("hide")
                 img_selector?.classList.add("hide")
             }
 

@@ -236,7 +236,7 @@ nav a {
     border-radius: 50%;
     width: 5.3em;
     height: 5.3em;
-    /* background-image: url(face2.jpeg); */
+    /* background-image: url(); */
     background-size: cover;
     background-position: center 20%;
 }
@@ -420,6 +420,11 @@ nav a {
     &:hover {
         cursor: pointer;
     }
+}
+
+
+.button_1{
+    margin-top: .6rem;
 }
 
 /* btn */

@@ -132,8 +132,8 @@ var content_string = [
     "img",
     "cv_name"
 ];
-var button_1 = document.querySelector(".text .button_1");
-var button_2 = document.querySelector(".text .button_2");
+var button_1 = document.querySelector(".button_1");
+var button_2 = document.querySelector(".button_2");
 var cv = document.querySelector(".cv");
 button_2.addEventListener("click", function () {
     var element = cv;
@@ -202,10 +202,28 @@ button_1.addEventListener("click", function () {
             if (input) {
                 content[i].innerText = input.value;
             }
-            var img_1 = document.querySelector(".image-selector input");
-            if (img_1) {
-                content[i].style.backgroundImage = "url(".concat(img_1.value, ")");
-            }
+            // const fileInput = document.querySelector("#imageInput") as HTMLInputElement | null;
+            // if (fileInput) {
+            //   fileInput.addEventListener("change", (event) => {
+            //     const file = (event.target as HTMLInputElement).files?.[0];
+            //     if (file) {
+            //       const reader = new FileReader();
+            //       reader.onload = (e) => {
+            //         const contentElement = content[i]; // Ensure content[i] is valid
+            //         if (contentElement) {
+            //           contentElement.style.backgroundImage = `url(${e.target?.result})`;
+            //         } else {
+            //           console.error("Content element at index", i, "is not defined or out of bounds.");
+            //         }
+            //       };
+            //       reader.readAsDataURL(file); // Read the file as a data URL
+            //     } else {
+            //       console.error("No file selected.");
+            //     }
+            //   });
+            // } else {
+            //   console.error("File input element not found.");
+            // }
         }
     }
 });
@@ -297,14 +315,17 @@ function content_click(element, values) {
                 }
             }
             // check_image
-            var txt = document.querySelector(".text");
+            var txt = document.querySelector(".edit-text");
+            var btns = document.querySelector(".btns-container");
             var img_selector = document.querySelector(".img-selector ");
             if (values === "img") {
                 txt === null || txt === void 0 ? void 0 : txt.classList.add("hide");
+                btns === null || btns === void 0 ? void 0 : btns.classList.add("hide");
                 img_selector === null || img_selector === void 0 ? void 0 : img_selector.classList.remove("hide");
             }
             else {
                 txt === null || txt === void 0 ? void 0 : txt.classList.remove("hide");
+                btns === null || btns === void 0 ? void 0 : btns.classList.remove("hide");
                 img_selector === null || img_selector === void 0 ? void 0 : img_selector.classList.add("hide");
             }
             var current_color = window.getComputedStyle(element).color;
