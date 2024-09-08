@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-       
+
 
 </head>
 
@@ -26,8 +26,8 @@
     <main>
         <nav>
             <div class="github-link">
-                <a href="https://github.com/Anshal-Shahid/hackathon-project-resume-builder">Go to Github</a> 
-               
+                <a href="https://github.com/Anshal-Shahid/hackathon-project-resume-builder">Go to Github</a>
+
             </div>
             <p>Resume Builder</p>
             <p>Anshal-Shahid</p>
@@ -35,16 +35,15 @@
 
 
 
-        <div class="first-col col">
 
-        </div>
 
         <div class="second-col col cv-con ">
             <div class="cv">
                 <div class="cv-col-1">
                     <div class="cv-upper-section">
-
-                        <img src="" alt="">
+                        <div class="img">
+                            <img src="" alt="">
+                        </div>
                     </div>
 
                     <div class="education">
@@ -97,7 +96,7 @@
                 <div class="cv-col-2">
                     <div class="cv-upper-section">
 
-                        <h1>ANSHAL SHAHID</h1>
+                        <h1 class="name">ANSHAL SHAHID</h1>
 
                     </div>
                     <div class="profile">
@@ -150,12 +149,16 @@
         </div>
 
         <div class="third-col col edit-panel">
+            <div class="img-selector hide">
+                <h3>Select Image </h3>
+                <input type="file" name="img" id="imageInput" accept="image/*">
+            </div>
             <div class="text">
                 <div class="edit-text">
                     <h3>Text</h3>
                     <input type="text" placeholder="Click to edit">
                 </div>
-
+                
                 <div class="btns-container">
                     <h3>Customize</h3>
                     <div class="btns">

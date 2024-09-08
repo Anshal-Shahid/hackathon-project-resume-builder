@@ -93,10 +93,12 @@ main {
     gap: 1rem;
     width: 100vw;
     font-family: aeonr;
-position: relative;
+    justify-content: end;
+    position: relative;
 
- }
-nav{
+}
+
+nav {
     position: fixed;
     top: 0%;
     background-color: var(--secondary-color);
@@ -113,14 +115,16 @@ nav{
     font-family: aeonb;
 }
 
-nav :nth-child(2){
+nav :nth-child(2) {
     font-size: .85rem;
 }
-nav :nth-child(3){
+
+nav :nth-child(3) {
     font-size: .75rem;
     color: rgba(218, 218, 218, 0.923);
 }
-nav a{
+
+nav a {
     text-decoration: none;
     color: var(--tertiary-color);
     font-size: .5rem;
@@ -130,7 +134,7 @@ nav a{
     position: relative;
     bottom: .14rem;
 
-    &:hover{
+    &:hover {
         opacity: .9;
     }
 }
@@ -154,7 +158,7 @@ nav a{
 
 .third-col {
     width: 30%;
-    background-color: #f0f0f0;
+    background-color: #d0e2f1b0;
 }
 
 
@@ -227,11 +231,14 @@ nav a{
     gap: .5em;
 }
 
-.cv .cv-col-1 img {
+.cv .cv-col-1 .img {
     background-color: teal;
     border-radius: 50%;
     width: 5.3em;
     height: 5.3em;
+    /* background-image: url(face2.jpeg); */
+    background-size: cover;
+    background-position: center 20%;
 }
 
 .cv-col-1 {
@@ -348,6 +355,11 @@ nav a{
 /* edit-panel */
 .edit-panel {
     padding: .7rem .7rem;
+}
+
+.img-selector{
+    position: relative;
+    top: 2rem;
 }
 
 .edit-panel .text {
@@ -610,6 +622,7 @@ nav a{
         font-size: 17px;
     }
 }
+
 @media (max-width:500px) {
 
     body,
@@ -617,6 +630,7 @@ nav a{
         font-size: 15px;
     }
 }
+
 @media (max-width:400px) {
 
     body,
@@ -624,6 +638,7 @@ nav a{
         font-size: 13.5px;
     }
 }
+
 @media (max-width:300px) {
 
     body,
@@ -632,7 +647,7 @@ nav a{
     }
 }
 
-.dev{
+.dev {
     width: 100%;
     height: 100vh;
     background-color: var(--secondary-color);
@@ -642,7 +657,8 @@ nav a{
     text-align: center;
     padding: .3rem;
 }
-.dev .news{
+
+.dev .news {
     font-family: aeonr;
     margin: auto 0;
     height: 100%;
@@ -650,21 +666,24 @@ nav a{
     display: flex;
     gap: .4rem;
 }
-.dev p{
+
+.dev p {
     text-align: center;
     width: 100%;
     font-family: aeonr;
 }
 
 @media (max-width:700px) {
-    main{
+    main {
         display: none !important;
     }
-    .dev{
+
+    .dev {
         display: block !important;
-     
+
     }
-    .news{
+
+    .news {
         display: flex;
         flex-direction: column;
         justify-content: center;

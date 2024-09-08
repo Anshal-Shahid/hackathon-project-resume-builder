@@ -92,6 +92,8 @@ const institute_3 = document.querySelector(".institute-3") as HTMLElement
 const contact_heading = document.querySelector(".contact h2") as HTMLElement
 const phone = document.querySelector(".contact-info :nth-child(1)") as HTMLElement
 const email = document.querySelector(".contact-info :nth-child(2)") as HTMLElement
+const img = document.querySelector(".img") as HTMLElement
+const cv_name= document.querySelector(".name") as HTMLElement
 
 
 
@@ -123,7 +125,9 @@ const content = [
     institute_3,
     contact_heading,
     phone,
-    email
+    email,
+    img,
+    cv_name
 
 ];
 
@@ -156,7 +160,9 @@ const content_string = [
     "institute_3",
     "contact_heading",
     "phone",
-    "email"
+    "email",
+    "img",
+    "cv_name"
 ];
 
 
@@ -165,18 +171,18 @@ const content_string = [
 
 const button_1 = document.querySelector(".text .button_1") as HTMLButtonElement
 const button_2 = document.querySelector(".text .button_2") as HTMLButtonElement
-const cv=document.querySelector(".cv")
+const cv = document.querySelector(".cv")
 button_2.addEventListener("click", () => {
     const element = cv
-    
+
     html2pdf()
-        .from(element) 
-        .save();      
+        .from(element)
+        .save();
 });
 
 
 button_1.addEventListener("click", () => {
-    
+
 
     for (let i = 0; i < content.length; i++) {
 
@@ -225,40 +231,45 @@ button_1.addEventListener("click", () => {
                 content[i]?.classList.remove("right")
             }
 
-            if(colorInput){
+            if (colorInput) {
 
-                content[i].style.color=colorInput.value
+                content[i].style.color = colorInput.value
             }
 
-            let fontSelect=document.querySelector(".row-1 select") as HTMLSelectElement | null;
+            let fontSelect = document.querySelector(".row-1 select") as HTMLSelectElement | null;
             if (fontSelect) {
-                const font=fontSelect.value
-                if (font==="font-1") {
-                    
-                content[i].style.fontFamily="aeonr"                    
+                const font = fontSelect.value
+                if (font === "font-1") {
+
+                    content[i].style.fontFamily = "aeonr"
                 }
-                if (font==="font-2") {
-                    
-                    content[i].style.fontFamily="mono"                    
-                    
+                if (font === "font-2") {
+
+                    content[i].style.fontFamily = "mono"
+
                 }
-                if (font==="font-3") {
-                    
-                    content[i].style.fontFamily="lace"                    
-                    
+                if (font === "font-3") {
+
+                    content[i].style.fontFamily = "lace"
+
                 }
-                
+
             }
-             // input***********
+            // input***********
 
-             const input=document.querySelector(".edit-text input") as HTMLInputElement | null;
+            const input = document.querySelector(".edit-text input") as HTMLInputElement | null;
 
-             if (input) {
-                content[i].innerText=input.value
-             }
-         
- 
-            
+            if (input) {
+                content[i].innerText = input.value
+            }
+
+            const img = document.querySelector(".image-selector input") as HTMLInputElement | null
+            if (img) {
+                content[i].style.backgroundImage = `url(${img.value})`
+            }
+
+
+
         }
     }
 
@@ -268,13 +279,13 @@ button_1.addEventListener("click", () => {
 
 
 
-function content_click(element: HTMLElement |null , values: string) {
+function content_click(element: HTMLElement | null, values: string) {
 
 
 
     if (element) {
         element.addEventListener("click", () => {
-            
+
 
 
             button_1.value = values;
@@ -290,128 +301,141 @@ function content_click(element: HTMLElement |null , values: string) {
             if (isBold) {
                 bold?.classList.add("btn-enabled")
             }
-            else{
+            else {
                 bold?.classList.remove("btn-enabled")
             }
             if (isItalic) {
                 italic?.classList.add("btn-enabled")
             }
-            else{   
+            else {
                 italic?.classList.remove("btn-enabled")
-                }
+            }
 
             if (isUnderline) {
                 underline?.classList.add("btn-enabled")
             }
-            else{
+            else {
                 underline?.classList.remove("btn-enabled")
             }
             if (isLeft) {
                 align_left?.classList.add("btn-enabled")
             }
-            else{
+            else {
                 align_left?.classList.remove("btn-enabled")
             }
             if (isCenter) {
                 align_center?.classList.add("btn-enabled")
             }
-            else{
+            else {
                 align_center?.classList.remove("btn-enabled")
             }
             if (isRight) {
                 align_right?.classList.add("btn-enabled")
             }
-            else{
+            else {
                 align_right?.classList.remove("btn-enabled")
             }
 
 
-            let fontSelect=document.querySelector(".row-1 select") as HTMLSelectElement | null;
+            let fontSelect = document.querySelector(".row-1 select") as HTMLSelectElement | null;
             if (fontSelect) {
-                
-                const current_font=element.style.fontFamily
-                if (current_font==="mono") {
-                    fontSelect.value="font-2"
+
+                const current_font = element.style.fontFamily
+                if (current_font === "mono") {
+                    fontSelect.value = "font-2"
                 }
-                else if (current_font==="lace") {
-                    fontSelect.value="font-3"
+                else if (current_font === "lace") {
+                    fontSelect.value = "font-3"
                 }
-                else{
-                    fontSelect.value="font-1"
+                else {
+                    fontSelect.value = "font-1"
                 }
-                
+
             }
             if (fontSelect) {
-                const font=fontSelect.value
-                if (font==="font-1") {
-                    
-                element.style.fontFamily="aeonr"                    
+                const font = fontSelect.value
+                if (font === "font-1") {
+
+                    element.style.fontFamily = "aeonr"
                 }
-                if (font==="font-2") {
-                    
-                    element.style.fontFamily="mono"                    
-                    
+                if (font === "font-2") {
+
+                    element.style.fontFamily = "mono"
+
                 }
-                if (font==="font-3") {
-                    
-                    element.style.fontFamily="lace"                    
-                    
+                if (font === "font-3") {
+
+                    element.style.fontFamily = "lace"
+
                 }
-                
+
             }
 
 
             // input***********
 
-            const input=document.querySelector(".edit-text input") as HTMLInputElement | null;
-            const text=element.innerText
+            const input = document.querySelector(".edit-text input") as HTMLInputElement | null;
+            const text = element.innerText
 
             if (input) {
-                input.value=text
+                input.value = text
             }
 
-            const text_editor=document.querySelector(".edit-text")
+            const text_editor = document.querySelector(".edit-text")
             // check_heading
             if (element.classList.contains("heading")) {
                 text_editor?.classList.add("hide")
             }
             else {
-                if (text_editor?.classList.contains("hide") ) {
+                if (text_editor?.classList.contains("hide")) {
                     text_editor?.classList.remove("hide")
 
                 }
             }
 
-
-
-           const current_color=window.getComputedStyle(element).color
-           console.log(current_color);
-           
-           function rgbToHex(rgb: string): string {
-            const result = rgb.match(/\d+/g)?.map(Number);
-            if (result && result.length === 3) {
-                return `#${((1 << 24) + (result[0] << 16) + (result[1] << 8) + result[2])
-                    .toString(16)
-                    .slice(1)
-                    .toUpperCase()}`;
+                // check_image
+            const txt=document.querySelector(".text")
+            const img_selector=document.querySelector(".img-selector ")
+            if (values==="img") {
+                
+                txt?.classList.add("hide")
+                img_selector?.classList.remove("hide")
             }
-            return rgb;
+            else{
+                txt?.classList.remove("hide")
+                img_selector?.classList.add("hide")
+            }
 
 
-            
 
-        }
-        
-        const hexColor = rgbToHex(current_color);
+            const current_color = window.getComputedStyle(element).color
+            console.log(current_color);
 
-           if(colorInput){
+            function rgbToHex(rgb: string): string {
+                const result = rgb.match(/\d+/g)?.map(Number);
+                if (result && result.length === 3) {
+                    return `#${((1 << 24) + (result[0] << 16) + (result[1] << 8) + result[2])
+                        .toString(16)
+                        .slice(1)
+                        .toUpperCase()}`;
+                }
+                return rgb;
 
-               colorInput.value=hexColor
-           }
-           if(colorInput &&colorP){
 
-               colorP.innerHTML=colorInput.value
-           }
+
+
+            }
+
+            const hexColor = rgbToHex(current_color);
+
+            if (colorInput) {
+
+                colorInput.value = hexColor
+            }
+            if (colorInput && colorP) {
+
+                colorP.innerHTML = colorInput.value
+            }
         });
     }
 }

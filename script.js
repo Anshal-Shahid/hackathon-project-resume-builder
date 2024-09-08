@@ -66,6 +66,8 @@ var institute_3 = document.querySelector(".institute-3");
 var contact_heading = document.querySelector(".contact h2");
 var phone = document.querySelector(".contact-info :nth-child(1)");
 var email = document.querySelector(".contact-info :nth-child(2)");
+var img = document.querySelector(".img");
+var cv_name = document.querySelector(".name");
 var content = [
     profile_heading,
     profile_p,
@@ -94,7 +96,9 @@ var content = [
     institute_3,
     contact_heading,
     phone,
-    email
+    email,
+    img,
+    cv_name
 ];
 var content_string = [
     "profile_heading",
@@ -124,7 +128,9 @@ var content_string = [
     "institute_3",
     "contact_heading",
     "phone",
-    "email"
+    "email",
+    "img",
+    "cv_name"
 ];
 var button_1 = document.querySelector(".text .button_1");
 var button_2 = document.querySelector(".text .button_2");
@@ -195,6 +201,10 @@ button_1.addEventListener("click", function () {
             var input = document.querySelector(".edit-text input");
             if (input) {
                 content[i].innerText = input.value;
+            }
+            var img_1 = document.querySelector(".image-selector input");
+            if (img_1) {
+                content[i].style.backgroundImage = "url(".concat(img_1.value, ")");
             }
         }
     }
@@ -285,6 +295,17 @@ function content_click(element, values) {
                 if (text_editor === null || text_editor === void 0 ? void 0 : text_editor.classList.contains("hide")) {
                     text_editor === null || text_editor === void 0 ? void 0 : text_editor.classList.remove("hide");
                 }
+            }
+            // check_image
+            var txt = document.querySelector(".text");
+            var img_selector = document.querySelector(".img-selector ");
+            if (values === "img") {
+                txt === null || txt === void 0 ? void 0 : txt.classList.add("hide");
+                img_selector === null || img_selector === void 0 ? void 0 : img_selector.classList.remove("hide");
+            }
+            else {
+                txt === null || txt === void 0 ? void 0 : txt.classList.remove("hide");
+                img_selector === null || img_selector === void 0 ? void 0 : img_selector.classList.add("hide");
             }
             var current_color = window.getComputedStyle(element).color;
             console.log(current_color);
