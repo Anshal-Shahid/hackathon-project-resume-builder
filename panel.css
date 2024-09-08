@@ -67,23 +67,13 @@
 }
 
 
-
 :root {
-
-
-
-    --secondary-color: #eaeaea;
     --secondary-color: #f9fcff;
     --primary-color: #b6bdc8;
     --tertiary-color: #f6f1f0;
-    --tertiary-color: #d4e9e2;
-    --tertiary-color: #eaeaea;
     --tertiary-color: #123107;
-    --brown-color: #123107;
-
 
     --heading: reco;
-
 }
 
 
@@ -103,6 +93,46 @@ main {
     gap: 1rem;
     width: 100vw;
     font-family: aeonr;
+position: relative;
+
+ }
+nav{
+    position: fixed;
+    top: 0%;
+    background-color: var(--secondary-color);
+    border: 1px solid black;
+    width: 100%;
+    z-index: 20;
+    background-color: #071e31a1;
+    color: var(--secondary-color);
+    height: 1.5rem;
+    padding: 0rem .4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: aeonb;
+}
+
+nav :nth-child(2){
+    font-size: .85rem;
+}
+nav :nth-child(3){
+    font-size: .75rem;
+    color: rgba(218, 218, 218, 0.923);
+}
+nav a{
+    text-decoration: none;
+    color: var(--tertiary-color);
+    font-size: .5rem;
+    background-color: var(--secondary-color);
+    padding: .15rem;
+    border-radius: .2rem;
+    position: relative;
+    bottom: .14rem;
+
+    &:hover{
+        opacity: .9;
+    }
 }
 
 .col {
@@ -145,23 +175,27 @@ main {
     border: 1px solid black;
     box-shadow: 0px 0px 1px 2px rgba(0, 0, 0, 0.182);
 }
+
 @media (max-width:1100px) {
-    .cv{
+    .cv {
         font-size: 26px;
     }
 }
+
 @media (max-width:1000px) {
-    .cv{
+    .cv {
         font-size: 24px;
     }
 }
+
 @media (max-width:900px) {
-    .cv{
+    .cv {
         font-size: 24px;
     }
 }
+
 @media (max-width:760px) {
-    .cv{
+    .cv {
         font-size: 23px;
     }
 }
@@ -212,7 +246,7 @@ main {
     border-bottom: 3px solid red;
     margin-bottom: .4em;
     width: fit-content;
-    font-weight: lighter ;
+    font-weight: lighter;
 }
 
 /* education */
@@ -267,7 +301,7 @@ main {
 .profile {
     margin-bottom: .5em;
 
-  
+
 }
 
 .profile p {
@@ -371,7 +405,7 @@ main {
     font-size: .8rem;
     /* padding: .3rem; */
 
-    &:hover{
+    &:hover {
         cursor: pointer;
     }
 }
@@ -531,7 +565,8 @@ main {
         cursor: unset !important;
     }
 }
-.hide{
+
+.hide {
     display: none !important;
 }
 
