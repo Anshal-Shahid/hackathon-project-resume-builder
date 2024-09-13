@@ -7,62 +7,62 @@
 
 @font-face {
     font-family: monsterrat;
-    src: url('fonts/Montserrat-VariableFont_wght.ttf') format('truetype'),
+    src: url('./fonts/Montserrat-VariableFont_wght.ttf') format('truetype'),
 
 }
 
 @font-face {
     font-family: lace;
-    src: url('fonts/lovelace regular.otf') format('truetype'),
+    src: url('./fonts/lovelace regular.otf') format('truetype'),
 
 }
 
 @font-face {
     font-family: mono;
-    src: url('fonts/MartianMono-ExtraBold.ttf') format('truetype'),
+    src: url('./fonts/MartianMono-ExtraBold.ttf') format('truetype'),
 
 }
 
 @font-face {
     font-family: mono-light;
-    src: url('fonts/MartianMono-ExtraLight.ttf') format('truetype'),
+    src: url('./fonts/MartianMono-ExtraLight.ttf') format('truetype'),
 
 }
 
 @font-face {
     font-family: thin;
-    src: url('fonts/MartianMono-Thin.ttf') format('truetype'),
+    src: url('./fonts/MartianMono-Thin.ttf') format('truetype'),
 
 }
 
 @font-face {
     font-family: poppin;
-    src: url('fonts/Poppins-Regular.ttf') format('truetype'),
+    src: url('./fonts/Poppins-Regular.ttf') format('truetype'),
 
 }
 
 @font-face {
     font-family: aeonb;
-    src: url('fonts/AeonikProTRIAL-Bold.otf') format('truetype'),
+    src: url('./fonts/AeonikProTRIAL-Bold.otf') format('truetype'),
 
 }
 
 @font-face {
     font-family: aeonr;
-    src: url('fonts/AeonikProTRIAL-Regular.otf') format('truetype'),
+    src: url('./fonts/AeonikProTRIAL-Regular.otf') format('truetype'),
 
 }
 
 
 @font-face {
     font-family: monument;
-    src: url('fonts/MonumentGrotesk-Bold.ttf') format('truetype'),
+    src: url('./fonts/MonumentGrotesk-Bold.ttf') format('truetype'),
 
 }
 
 @font-face {
     font-family: reco;
-    src: url('fonts/recoleta-regulardemo.otf') format('truetype'),
+    src: url('./fonts/recoleta-regulardemo.otf') format('truetype'),
 
 }
 
