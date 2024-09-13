@@ -185,7 +185,7 @@ nav a {
     background-color: var(--secondary-color);
     /* background-color: yellowgreen; */
     width: 100%;
-    height: 90%;
+    height: 100%;
     border-radius: .2rem;
     display: flex;
     column-gap: .4rem;
@@ -194,6 +194,7 @@ nav a {
     /* top: .7rem; */
     border: 1px solid black;
     box-shadow: 0px 0px 1px 2px rgba(0, 0, 0, 0.182);
+    top: 1.3rem;
 }
 
 @media (max-width:1100px) {
@@ -227,7 +228,9 @@ nav a {
     .second-col {
         padding: .1rem;
     }
-    
+    main{
+        padding-top: 1rem;
+    }
     
 }
 
@@ -272,7 +275,24 @@ nav a {
 @media (max-width:360px) {
     .cv {
         font-size: 12.5px;
-        width: 78%;
+        width: 71%;
+        position: relative;
+        top: 1rem;
+        min-height: 35vh;
+        padding-bottom: 6rem;
+    }
+    .second-col{
+        min-height: 60vh;
+        
+    } 
+    .second-col {
+        padding: .1rem;
+    }
+}
+@media (max-width:300px) {
+    .cv {
+        font-size: 12.5px;
+        width: 67%;
         position: relative;
         top: 1rem;
         min-height: 35vh;
@@ -658,9 +678,12 @@ nav a {
   
 
     .third-col{
-        width: 90%;
+        width: 100%;
         padding: .5rem 3rem;
         min-height: 40vh;
+        position: relative;
+        top: 1.2rem;
+        /* background-color: ; */
     }
     .edit-panel .text{
         top: unset;
@@ -692,6 +715,9 @@ nav a {
 @media (max-width:500px) {
     .third-col{
         padding: .5rem 1rem;
+        position: relative;
+        width: 100%;
+        position: relative;
     }
 }
 
