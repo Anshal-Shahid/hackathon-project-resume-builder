@@ -283,6 +283,7 @@ function content_click(element, values) {
             else {
                 align_right === null || align_right === void 0 ? void 0 : align_right.classList.remove("btn-enabled");
             }
+            console.log(element.style.fontFamily);
             var fontSelect = document.querySelector(".row-1 select");
             if (fontSelect) {
                 var current_font = element.style.fontFamily;
