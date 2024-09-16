@@ -137,7 +137,6 @@ var button_2 = document.querySelector(".button_2");
 var cv = document.querySelector(".cv");
 button_1.addEventListener("click", function () {
     var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o;
-    console.log("dfeknfk");
     for (var i = 0; i < content.length; i++) {
         if (button_1.value === content_string[i]) {
             if (underline === null || underline === void 0 ? void 0 : underline.classList.contains("btn-enabled")) {
@@ -203,10 +202,10 @@ button_1.addEventListener("click", function () {
             var circle_img = document.querySelector(".img img");
             var profilePictureFile = (_o = profilePictureInput === null || profilePictureInput === void 0 ? void 0 : profilePictureInput.files) === null || _o === void 0 ? void 0 : _o[0];
             var profilePictureURL = profilePictureFile ? URL.createObjectURL(profilePictureFile) : "";
-            console.log(circle_img);
-            if (profilePictureInput && circle) {
-                console.log("okay");
-                circle.innerHTML = " ".concat(profilePictureURL ? "<img src=\"".concat(profilePictureURL, "\" alt=\"Profile Picture\" class=\"profilePicture\"/>") : "");
+            if (content_string[i] === "img") {
+                if (profilePictureInput && circle) {
+                    circle.innerHTML = " ".concat(profilePictureURL ? "<img src=\"".concat(profilePictureURL, "\" alt=\"  \" class=\"profilePicture\"/>") : "");
+                }
             }
             // if (fileInput) {
             //   fileInput.addEventListener("change", (event) => {
@@ -238,7 +237,6 @@ button_2.addEventListener("click", function () {
         .from(element)
         .save();
 });
-console.log(content_string);
 function content_click(element, values) {
     if (element) {
         element.addEventListener("click", function () {

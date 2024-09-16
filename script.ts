@@ -1,6 +1,7 @@
 // import { log } from "console";
 // import path from "path";
 
+
 // import { log } from "console"
 
 const edit_panel = document.querySelector(".edit-panel ")
@@ -175,10 +176,9 @@ const cv = document.querySelector(".cv")
 
 
 button_1.addEventListener("click", () => {
-console.log("dfeknfk");
 
     for (let i = 0; i < content.length; i++) {
-
+        
         if (button_1.value === content_string[i]) {
 
             if (underline?.classList.contains("btn-enabled")) {
@@ -262,14 +262,16 @@ console.log("dfeknfk");
 
             const profilePictureFile = profilePictureInput?.files?.[0];
             const profilePictureURL = profilePictureFile ? URL.createObjectURL(profilePictureFile) : "";
-
-            console.log(circle_img);
             
-            if (profilePictureInput && circle) {
-                console.log("okay");
-                
-                circle.innerHTML=` ${profilePictureURL ? `<img src="${profilePictureURL}" alt="  " class="profilePicture"/>` : ""}`
-            }
+                    if (content_string[i]==="img") {
+                        
+                        if (profilePictureInput && circle) {
+                            
+                            circle.innerHTML=` ${profilePictureURL ? `<img src="${profilePictureURL}" alt="  " class="profilePicture"/>` : ""}`
+                        }
+                    }
+
+
             // if (fileInput) {
             //   fileInput.addEventListener("change", (event) => {
             //     const file = (event.target as HTMLInputElement).files?.[0];
