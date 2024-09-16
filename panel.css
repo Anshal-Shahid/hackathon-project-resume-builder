@@ -19,7 +19,7 @@
 
 @font-face {
     font-family: mono;
-    src: url('./fonts/MartianMono-ExtraBold.ttf') format('truetype'),
+    src: url('/fonts/MartianMono-ExtraBold.ttf') format('truetype'),
 
 }
 
@@ -43,7 +43,7 @@
 
 @font-face {
     font-family: aeonb;
-    src: url('./fonts/AeonikProTRIAL-Bold.otf') format('truetype'),
+    src: url('/fonts/AeonikProTRIAL-Bold.otf') format('truetype'),
 
 }
 
