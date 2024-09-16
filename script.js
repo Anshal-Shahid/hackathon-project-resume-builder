@@ -231,12 +231,6 @@ button_1.addEventListener("click", function () {
         }
     }
 });
-button_2.addEventListener("click", function () {
-    var element = cv;
-    html2pdf()
-        .from(element)
-        .save();
-});
 function content_click(element, values) {
     if (element) {
         element.addEventListener("click", function () {
@@ -365,6 +359,12 @@ function content_click(element, values) {
         });
     }
 }
+button_2.addEventListener("click", function () {
+    var element = cv;
+    html2pdf()
+        .from(element)
+        .save();
+});
 content.forEach(function (element, index) {
     content_click(element, content_string[index]);
 });
