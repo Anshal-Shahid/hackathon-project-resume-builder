@@ -299,7 +299,8 @@ function content_click(element, values) {
             if (fontSelect) {
                 var font = fontSelect.value;
                 if (font === "font-1") {
-                    element.style.fontFamily = 'sans-serif';
+                    element.style.fontFamily = "sans-serif";
+                    console.log(element.style.fontFamily);
                 }
                 if (font === "font-2") {
                     element.style.fontFamily = "mono";

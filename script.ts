@@ -389,7 +389,9 @@ function content_click(element: HTMLElement | null, values: string) {
                 const font = fontSelect.value
                 if (font === "font-1") {
 
-                    element.style.fontFamily = 'sans-serif'
+                    element.style.fontFamily = "sans-serif"
+                    console.log(element.style.fontFamily);
+                    
                 }
                 if (font === "font-2") {
 
