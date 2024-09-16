@@ -44,7 +44,7 @@
       "dest": "/panel.html"
     },
     {
-      "src": "./fonts/(.*)",
+      "src": "/fonts/(.*)",
       "dest": "/fonts/$1"
     }
   ]

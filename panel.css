@@ -48,8 +48,8 @@
 }
 
 @font-face {
-    font-family: aeonr;
-    src: url('/fonts/AeonikProTRIAL-Regular.otf') format('truetype'),
+    font-family: "aeonr";
+    src: url('./fonts/AeonikProTRIAL-Regular.otf') format('truetype'),
 
 }
 
@@ -93,10 +93,9 @@ main {
     position: relative;
     gap: 1rem;
     width: 100vw;
-    font-family: aeonr;
+    font-family: "aeonr ";
     justify-content: end;
     position: relative;
-    
 }
 
 
