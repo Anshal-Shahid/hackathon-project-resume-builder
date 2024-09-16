@@ -49,7 +49,7 @@
 
 @font-face {
     font-family: aeonr;
-    src: url('./fonts/AeonikProTRIAL-Regular.otf') format('truetype'),
+    src: url('/fonts/AeonikProTRIAL-Regular.otf') format('truetype'),
 
 }
 
