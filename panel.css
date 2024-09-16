@@ -94,6 +94,7 @@ main {
     gap: 1rem;
     width: 100vw;
     font-family: "aeonr" ,sans-serif;
+    font-family: mono;
     justify-content: end;
     position: relative;
 
