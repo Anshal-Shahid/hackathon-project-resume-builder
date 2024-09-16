@@ -369,7 +369,7 @@ function content_click(element: HTMLElement | null, values: string) {
                 align_right?.classList.remove("btn-enabled")
             }
 
-            console.log(element.style.fontFamily);
+            console.log("sad");
             
             let fontSelect = document.querySelector(".row-1 select") as HTMLSelectElement | null;
             if (fontSelect) {
