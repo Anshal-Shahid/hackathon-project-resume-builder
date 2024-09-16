@@ -303,13 +303,6 @@ button_1.addEventListener("click", () => {
 })
 
 
-button_2.addEventListener("click", () => {
-    const element = cv
-
-    html2pdf()
-        .from(element)
-        .save();
-});
 
 
 function content_click(element: HTMLElement | null, values: string) {
@@ -372,7 +365,7 @@ function content_click(element: HTMLElement | null, values: string) {
             console.log("sad");
             
             let fontSelect = document.querySelector(".row-1 select") as HTMLSelectElement | null;
-            if (fontSelect) {
+            if (fontSelect) {  
 
                 const current_font = element.style.fontFamily
                 if (current_font === "mono") {
@@ -485,6 +478,13 @@ function content_click(element: HTMLElement | null, values: string) {
     }
 }
 
+button_2.addEventListener("click", () => {
+    const element = cv
+
+    html2pdf()
+        .from(element)
+        .save();
+});
 
 
 content.forEach((element, index) => {
