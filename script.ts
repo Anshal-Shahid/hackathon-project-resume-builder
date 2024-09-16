@@ -172,20 +172,12 @@ const content_string = [
 const button_1 = document.querySelector(".button_1") as HTMLButtonElement
 const button_2 = document.querySelector(".button_2") as HTMLButtonElement
 const cv = document.querySelector(".cv")
-button_2.addEventListener("click", () => {
-    const element = cv
-
-    html2pdf()
-        .from(element)
-        .save();
-});
 
 
 button_1.addEventListener("click", () => {
-
+console.log("dfeknfk");
 
     for (let i = 0; i < content.length; i++) {
-
 
         if (button_1.value === content_string[i]) {
 
@@ -232,7 +224,6 @@ button_1.addEventListener("click", () => {
             }
 
             if (colorInput) {
-
                 content[i].style.color = colorInput.value
             }
 
@@ -260,11 +251,25 @@ button_1.addEventListener("click", () => {
             const input = document.querySelector(".edit-text input") as HTMLInputElement | null;
 
             if (input) {
+                
                 content[i].innerText = input.value
             }
+            console.log("dkbzkd");
+            
+            const profilePictureInput = document.querySelector(".imageInput") as HTMLInputElement | null;
+            const circle=document.querySelector(".img") as HTMLInputElement | null;
+            const circle_img=document.querySelector(".img img") as HTMLInputElement ;
 
-            // const fileInput = document.querySelector("#imageInput") as HTMLInputElement | null;
+            const profilePictureFile = profilePictureInput?.files?.[0];
+            const profilePictureURL = profilePictureFile ? URL.createObjectURL(profilePictureFile) : "";
 
+            console.log(circle_img);
+            
+            if (profilePictureInput && circle) {
+                console.log("okay");
+                
+                circle.innerHTML=` ${profilePictureURL ? `<img src="${profilePictureURL}" alt="  " class="profilePicture"/>` : ""}`
+            }
             // if (fileInput) {
             //   fileInput.addEventListener("change", (event) => {
             //     const file = (event.target as HTMLInputElement).files?.[0];
@@ -296,7 +301,13 @@ button_1.addEventListener("click", () => {
 })
 
 
+button_2.addEventListener("click", () => {
+    const element = cv
 
+    html2pdf()
+        .from(element)
+        .save();
+});
 
 
 function content_click(element: HTMLElement | null, values: string) {
@@ -391,7 +402,8 @@ function content_click(element: HTMLElement | null, values: string) {
 
             }
 
-
+            console.log(values);
+            
             // input***********
 
             const input = document.querySelector(".edit-text input") as HTMLInputElement | null;
@@ -416,8 +428,12 @@ function content_click(element: HTMLElement | null, values: string) {
                 // check_image
             const txt=document.querySelector(".edit-text")
             const btns=document.querySelector(".btns-container")
-            const img_selector=document.querySelector(".img-selector ")
+            const img_selector=document.querySelector(".img-selector")
+
+
+
             if (values==="img") {
+                console.log("lll");
                 
                 txt?.classList.add("hide")
                 btns?.classList.add("hide")
@@ -428,6 +444,7 @@ function content_click(element: HTMLElement | null, values: string) {
                 btns?.classList.remove("hide")
                 img_selector?.classList.add("hide")
             }
+
 
 
 
@@ -462,6 +479,9 @@ function content_click(element: HTMLElement | null, values: string) {
         });
     }
 }
+
+
+
 content.forEach((element, index) => {
     content_click(element, content_string[index]);
 });

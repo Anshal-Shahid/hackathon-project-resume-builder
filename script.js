@@ -135,14 +135,9 @@ var content_string = [
 var button_1 = document.querySelector(".button_1");
 var button_2 = document.querySelector(".button_2");
 var cv = document.querySelector(".cv");
-button_2.addEventListener("click", function () {
-    var element = cv;
-    html2pdf()
-        .from(element)
-        .save();
-});
 button_1.addEventListener("click", function () {
-    var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m;
+    var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o;
+    console.log("dfeknfk");
     for (var i = 0; i < content.length; i++) {
         if (button_1.value === content_string[i]) {
             if (underline === null || underline === void 0 ? void 0 : underline.classList.contains("btn-enabled")) {
@@ -202,7 +197,17 @@ button_1.addEventListener("click", function () {
             if (input) {
                 content[i].innerText = input.value;
             }
-            // const fileInput = document.querySelector("#imageInput") as HTMLInputElement | null;
+            console.log("dkbzkd");
+            var profilePictureInput = document.querySelector(".imageInput");
+            var circle = document.querySelector(".img");
+            var circle_img = document.querySelector(".img img");
+            var profilePictureFile = (_o = profilePictureInput === null || profilePictureInput === void 0 ? void 0 : profilePictureInput.files) === null || _o === void 0 ? void 0 : _o[0];
+            var profilePictureURL = profilePictureFile ? URL.createObjectURL(profilePictureFile) : "";
+            console.log(circle_img);
+            if (profilePictureInput && circle) {
+                console.log("okay");
+                circle.innerHTML = " ".concat(profilePictureURL ? "<img src=\"".concat(profilePictureURL, "\" alt=\"Profile Picture\" class=\"profilePicture\"/>") : "");
+            }
             // if (fileInput) {
             //   fileInput.addEventListener("change", (event) => {
             //     const file = (event.target as HTMLInputElement).files?.[0];
@@ -227,6 +232,13 @@ button_1.addEventListener("click", function () {
         }
     }
 });
+button_2.addEventListener("click", function () {
+    var element = cv;
+    html2pdf()
+        .from(element)
+        .save();
+});
+console.log(content_string);
 function content_click(element, values) {
     if (element) {
         element.addEventListener("click", function () {
@@ -298,6 +310,7 @@ function content_click(element, values) {
                     element.style.fontFamily = "lace";
                 }
             }
+            console.log(values);
             // input***********
             var input = document.querySelector(".edit-text input");
             var text = element.innerText;
@@ -317,8 +330,9 @@ function content_click(element, values) {
             // check_image
             var txt = document.querySelector(".edit-text");
             var btns = document.querySelector(".btns-container");
-            var img_selector = document.querySelector(".img-selector ");
+            var img_selector = document.querySelector(".img-selector");
             if (values === "img") {
+                console.log("lll");
                 txt === null || txt === void 0 ? void 0 : txt.classList.add("hide");
                 btns === null || btns === void 0 ? void 0 : btns.classList.add("hide");
                 img_selector === null || img_selector === void 0 ? void 0 : img_selector.classList.remove("hide");
