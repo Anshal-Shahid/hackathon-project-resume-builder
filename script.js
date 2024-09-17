@@ -185,7 +185,7 @@ button_1.addEventListener("click", function () {
                     content[i].style.fontFamily = "sans-serif";
                 }
                 if (font === "font-2") {
-                    content[i].style.fontFamily = "sans-serif";
+                    content[i].style.fontFamily = "reco";
                 }
                 if (font === "font-3") {
                     content[i].style.fontFamily = "sans-serif";

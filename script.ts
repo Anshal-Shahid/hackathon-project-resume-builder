@@ -368,10 +368,10 @@ function content_click(element: HTMLElement | null, values: string) {
             if (fontSelect) {  
 
                 const current_font = element.style.fontFamily
-                if (current_font === "mono") {
+                if (current_font === "sans-serif") {
                     fontSelect.value = "font-2"
                 }
-                else if (current_font === "lace") {
+                else if (current_font === "sans-serif") {
                     fontSelect.value = "font-3"
                 }
                 else {
