@@ -232,16 +232,16 @@ button_1.addEventListener("click", () => {
                 const font = fontSelect.value
                 if (font === "font-1") {
 
-                    content[i].style.fontFamily = "aeonr"
+                    content[i].style.fontFamily = "sans-serif"
                 }
                 if (font === "font-2") {
 
-                    content[i].style.fontFamily = "mono"
+                    content[i].style.fontFamily = "sans-serif"
 
                 }
                 if (font === "font-3") {
 
-                    content[i].style.fontFamily = "lace"
+                    content[i].style.fontFamily = "sans-serif"
 
                 }
 
@@ -389,12 +389,12 @@ function content_click(element: HTMLElement | null, values: string) {
                 }
                 if (font === "font-2") {
 
-                    element.style.fontFamily = "mono"
+                    element.style.fontFamily = "sans-serif"
 
                 }
                 if (font === "font-3") {
 
-                    element.style.fontFamily = "lace"
+                    element.style.fontFamily = "sans-serif"
 
                 }
 
@@ -403,7 +403,7 @@ function content_click(element: HTMLElement | null, values: string) {
             console.log(values);
             
             // input***********
-
+            
             const input = document.querySelector(".edit-text input") as HTMLInputElement | null;
             const text = element.innerText
 
